@@ -3,6 +3,7 @@ import style from "../cart-item/CartItem.module.css";
 import Heart from "../heart/Heart";
 import Button from "../../layout/all-buttons/button/Button.jsx";
 import star from "../../assets/star.svg";
+import NumberAdjuster from "../numberadjuster/NumberAdjuster.jsx";
 
 const CartItem = ({
   img,
@@ -18,7 +19,6 @@ const CartItem = ({
     <>
       <div className={style.cartitem}>
         <div className={style.cartitem_wrp}>
-          
           <div className={style.cartitem_pe}>
             <div className={style.itm_img}>
               <p className={style.aditm}>Added Items</p>
@@ -32,11 +32,11 @@ const CartItem = ({
                 <p className={style.titleone}>{titleOne}</p>
                 <div className={style.ratingc}>
                   <img src={star} alt="star" />
-                  <p>{rating}</p>
+                  <p className={style.ratingp}>{rating}</p>
                 </div>
               </div>
 
-              <div className={style.tithrt}>
+              <div className={style.tithlt}>
                 <p className={style.title}>{title}</p>
                 <Heart />
               </div>
@@ -45,7 +45,7 @@ const CartItem = ({
                 <p>{caption}</p>
               </div>
 
-              <div className={style.cartbtn}>
+              <div className={style.cartbtn1}>
                 <Button text="Delete" />
               </div>
             </div>
@@ -62,12 +62,16 @@ const CartItem = ({
 
             <div className={style.quantity}>
               <p className={style.qnt}>Quantity</p>
-              Increment
+              <NumberAdjuster />
             </div>
 
-            <div>
+            <div className={style.amount}>
               <p className={style.amt}>Amount</p>
               <p className={style.amtm}>{amount}</p>
+            </div>
+
+            <div className={style.cartbtn}>
+              <Button text="Delete" />
             </div>
           </div>
         </div>

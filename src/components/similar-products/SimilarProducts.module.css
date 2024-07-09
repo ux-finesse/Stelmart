@@ -74,3 +74,75 @@
   line-height: 49.2px;
   text-align: center;
 }
+
+
+@media (max-width: 1024px) {
+  .recwrp {
+    margin-left: 80px;
+  }
+
+  .recommended h2 {
+    font-size: 36px;
+  }
+
+  .rectop,
+  .products,
+  .secbtm {
+    padding-right: 80px;
+  }
+
+  .products {
+    gap: 40px;
+  }
+}
+
+/* For devices with width 768px or less */
+@media (max-width: 768px) {
+  .recwrp {
+    margin-left: 40px;
+  }
+
+  .recommended h2 {
+    font-size: 32px;
+  }
+
+  .rectop,
+  .products,
+  .secbtm {
+    padding-right: 40px;
+  }
+
+  .products {
+    gap: 30px;
+  }
+
+  .secbtm Button {
+    padding: 8px 30px;
+  }
+}
+
+/* For devices with width 480px or less */
+@media (max-width: 480px) {
+  .recwrp {
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .recommended h2 {
+    font-size: 28px;
+  }
+
+  .rectop,
+  .products,
+  .secbtm {
+    padding-right: 0;
+  }
+
+  .products {
+    gap: 20px;
+  }
+
+  .secbtm Button {
+    padding: 6px 20px;
+  }
+}
