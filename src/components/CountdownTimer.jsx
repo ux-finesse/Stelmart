@@ -1,12 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const CountdownTimer = () => {
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = (targetTime) => {
     const now = new Date();
-    const targetTime = new Date();
-    targetTime.setHours(24, 0, 0, 0); 
-
     const difference = targetTime - now;
     let timeLeft = {};
 
@@ -17,7 +14,10 @@ const CountdownTimer = () => {
         seconds: Math.floor((difference / 1000) % 60),
       };
     } else {
-      
+      // When the countdown reaches 0, restart it for the next 24 hours
+      const newTargetTime = new Date();
+      newTargetTime.setHours(newTargetTime.getHours() + 24);
+      setTargetTime(newTargetTime);
       timeLeft = {
         hours: 24,
         minutes: 0,
@@ -28,19 +28,25 @@ const CountdownTimer = () => {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const initialTargetTime = new Date();
+  initialTargetTime.setHours(initialTargetTime.getHours() + 24);
+
+  const [targetTime, setTargetTime] = useState(initialTargetTime);
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetTime));
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+    timerRef.current = setInterval(() => {
+      setTimeLeft(calculateTimeLeft(targetTime));
     }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+    // Clear interval on component unmount
+    return () => clearInterval(timerRef.current);
+  }, [targetTime]);
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "center"}}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <p>{timeLeft.hours}:</p>
         <p>{timeLeft.minutes}:</p>
         <p>{timeLeft.seconds}</p>

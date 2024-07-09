@@ -1,7 +1,7 @@
-import img1 from "./src/assets/img1.svg";
-import img2 from "./src/assets/img2.svg";
-import img3 from "./src/assets/img3.svg";
-import img4 from "./src/assets/img4.svg";
+import img1 from "./src/assets/couch.svg";
+import img2 from "./src/assets/laptop.svg";
+import img3 from "./src/assets/kit.svg";
+import img4 from "./src/assets/hoodie.svg";
 import img5 from "./src/assets/img5.svg";
 // import img6 from "./src/assets/img6.svg";
 

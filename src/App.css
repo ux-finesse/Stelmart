@@ -1,19 +1,18 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
-input{
+input {
   outline: none;
   border: none;
 }
-
-
 
 @font-face {
   font-family: "ClashGrotesk-Extralight";
@@ -45,4 +44,3 @@ input{
   src: url("../fonts/ClashGrotesk-Bold.ttf") format("truetype");
   font-style: normal;
 }
-

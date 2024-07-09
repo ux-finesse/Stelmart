@@ -68,6 +68,10 @@ form {
   right: 0;
 }
 
+.send img{
+    width: 100%;
+  }
+
 .form input {
   width: 749.25px;
   height: 89px;
@@ -79,4 +83,62 @@ form {
   line-height: 33.85px;
   letter-spacing: 0.01em;
   text-align: left;
+}
+
+/* Styles for tablets */
+@media (max-width: 1024px) {
+  .input {
+    margin: 40px;
+    gap: 40px;
+  }
+
+  .input p {
+    font-size: 22px;
+  }
+
+  .subscribe_wrp h5 {
+    font-size: 36px;
+  }
+
+  .form input {
+    width: 100%;
+    height: 70px;
+    padding: 20px 150px 20px 24px;
+  }
+
+  .send {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .input {
+    flex-direction: column;
+    margin: 30px;
+    gap: 20px;
+  }
+
+  .input p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .subscribe_wrp h5 {
+    font-size: 28px;
+    line-height: 34.89px;
+  }
+
+  .form input {
+    width: 100%;
+    height: 60px;
+    padding: 16px 120px 16px 20px;
+    border-radius: 16px;
+  }
+
+  .send {
+    width: 60px;
+    height: 60px;
+  }
 }

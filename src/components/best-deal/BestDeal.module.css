@@ -51,3 +51,56 @@
 .img3 img{
   width: 100%;
 }
+
+@media (max-width: 1024px) {
+  .bewrp {
+   padding: 40px 21px;
+   margin-left: 50px;
+
+  }
+
+  .bestdeal h2 {
+    font-size: 36px;
+  }
+
+  .betop {
+    padding-right: 80px;
+  }
+
+  .products {
+    gap: 40px;
+    padding-right: 0;
+  }
+
+  .img3 {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bewrp {
+    padding: 20px 16px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .bestdeal h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .betop {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 20px;
+  }
+
+  .products {
+    gap: 20px;
+    padding-right: 0;
+  }
+
+  .img3 {
+    margin-top: 50px;
+  }
+}

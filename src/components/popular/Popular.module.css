@@ -49,3 +49,51 @@
   padding-right: 133px;
 }
 
+
+@media (max-width: 1024px) {
+  .popwrp {
+    margin-left: 50px;
+    padding: 20px 21px;
+  }
+
+  .poptop {
+    padding-right: 50px;
+  }
+
+  .products {
+    padding-right: 50px;
+    gap: 30px;
+  }
+
+  .poptop h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popwrp {
+    margin-left: 0;
+    padding: 20px 16px;
+    height: auto;
+  }
+
+  .poptop {
+    padding-right: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .poptop h2 {
+    font-size: 28px;
+  }
+
+  .popbtns {
+    margin-top: 15px;
+  }
+
+  .products {
+    padding-right: 0;
+    gap: 20px;
+    overflow-x: auto;
+  }
+}

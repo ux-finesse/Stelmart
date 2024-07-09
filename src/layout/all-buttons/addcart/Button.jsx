@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import style from "./Button.module.css";
 
-const Sort = () => {
+const Button = () => {
   return (
     <>
       <button className={style.btn}>
@@ -11,4 +11,4 @@ const Sort = () => {
   );
 };
 
-export default Sort;
+export default Button;
