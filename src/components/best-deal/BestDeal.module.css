@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.bestdeal {
+  display: flex;
+  justify-content: center;
+  margin-top: 51px;
+}
+
+.bewrp {
+  height: 461px;
+  display: flex;
+  width: 100%;
+  /* max-width: 90vw; */
+  padding: 20px 0;
+  margin-left: 133px;
+  flex-direction: column;
+}
+
+.bestdeal h2 {
+  font-size: 40px;
+  color: #fb8500;
+  margin-bottom: 25px;
+  font-family: "ClashGrotesk-Semibold";
+}
+
+.betop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 133px;
+  justify-content: space-between;
+}
+
+.products {
+  display: flex;
+  gap: 54px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  min-height: 370px;
+  padding-right: 133px;
+}
+
+.img3{
+  margin-top: 100px;
+
+}
+.img3 img{
+  width: 100%;
+}

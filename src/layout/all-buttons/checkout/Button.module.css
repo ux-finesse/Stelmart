@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("../fonts/ClashGrotesk-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+}
+
+
+.btn {
+  font-family: "ClashGrotesk-Medium";
+  background-color: #023047;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 27px;
+  border: none;
+  font-size: 36px;
+  color: #fff;
+  padding: 10px 60px;
+}
+
+
+.btn:hover{
+  background-color: #72ABC7;
+}

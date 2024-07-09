@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.recommended {
+  display: flex;
+  justify-content: center;
+  margin-top: 51px;
+  margin-bottom: 79px;
+}
+
+.recwrp {
+  /* height: 461px; */
+  display: flex;
+  width: 100%;
+  /* max-width: 90vw; */
+  padding: 20px 0;
+  margin-left: 133px;
+  flex-direction: column;
+}
+
+.recommended h2 {
+  font-size: 40px;
+  color: #fb8500;
+  margin-bottom: 25px;
+  text-align: center;
+  width: 100%;
+  font-family: "ClashGrotesk-Semibold";
+}
+
+.rectop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 133px;
+  justify-content: space-between;
+}
+
+.products {
+  display: flex;
+  gap: 54px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  min-height: 370px;
+  padding-right: 133px;
+}
+
+.secbtm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 76px;
+  padding-right: 133px;
+}
+
+.secbtm Button {
+  font-family: "ClashGrotesk-Semibold";
+  background-color: #fb8500;
+  padding: 10px 38.5px;
+  border-radius: 12px;
+}
+
+.pro_btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.simi {
+  display: none;
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 40px;
+  line-height: 49.2px;
+  text-align: center;
+}

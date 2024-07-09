@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk-Regular';
+  src: 
+       url('../fonts/ClashGrotesk-Regular.ttf') format('truetype');
+  
+  font-style: normal;
+}
+
+.ban_wrp {
+  display: flex;
+  margin-top: 70px;
+}
+
+.deals{
+    display: flex;
+    flex-direction: column;
+}
+
+.img1, .img1 img{
+width: 100%;
+}
+
+.img2 img{
+width: 100%;
+}
+
+.img2{
+    margin: 92px 0;
+}
+
+
+.dealstp {
+  display: flex;
+}
+
+.dealstpl{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dealstpl p{
+      font-family: 'ClashGrotesk-Regular';
+font-size: 24px;
+font-weight: 400;
+line-height: 29.52px;
+text-align: left;
+
+}
+
+.dealstp span {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 40px;
+  line-height: 49.2px;
+  text-align: left;
+}
+
+.dealsbtm{
+    display: flex;
+    gap: 30px;
+}
+.dealsbtm span {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 128px;
+  line-height: 157.44px;
+  text-align: left;
+    color: #FF0000;
+}
+
+
+.dealsbtm p {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 128px;
+  line-height: 157.44px;
+  text-align: left;
+  color: #FB8500;
+}
+
+
+
+.countdown {
+  width: 238px;
+  height: 69px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #191919;
+  margin-left: 10px;
+}
+
+.countdown p {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 49.2px;
+  text-align: center;
+  color: #8ECAE6;
+}
+
+

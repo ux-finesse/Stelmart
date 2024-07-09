@@ -1,0 +1,19 @@
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.qbtn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 290px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}

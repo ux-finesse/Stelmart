@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "ClashGrotesk-Regular";
+  src: url("../../fonts/ClashGrotesk-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+}
+
+.procnt {
+  width: 270px;
+  height: 370px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.proimg {
+  background-color: #f0f0f0;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 225px;
+  margin-bottom: 10px;
+}
+
+.top,
+.mid,
+.btm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 17px;
+}
+
+.top {
+  font-size: 14px;
+  font-family: "ClashGrotesk-Regular";
+}
+
+.mid {
+  font-size: 24px;
+  font-family: "ClashGrotesk-Semibold";
+}
+
+.btm {
+  font-size: 14px;
+  font-family: "ClashGrotesk-Regular";
+}
+
+.rating {
+  font-family: "ClashGrotesk-Regular";
+  display: flex;
+  font-size: 14px;
+  gap: 5px;
+  align-items: center;
+}
+
+.btm Button {
+  font-family: "ClashGrotesk-Medium";
+  font-size: 16px;
+  padding: 5px 13px;
+  border-radius: 17px;
+  background-color: #023047;
+}
+.btm Button:hover {
+  background: #72ABC7;
+}
+
+/* .btm p {
+  font-size: 24px;
+} */

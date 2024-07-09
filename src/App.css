@@ -1,0 +1,48 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+input{
+  outline: none;
+  border: none;
+}
+
+
+
+@font-face {
+  font-family: "ClashGrotesk-Extralight";
+  src: url("../fonts/ClashGrotesk-Extralight.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Light";
+  src: url("../fonts/ClashGrotesk-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Regular";
+  src: url("../fonts/ClashGrotesk-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("../fonts/ClashGrotesk-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Bold";
+  src: url("../fonts/ClashGrotesk-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+

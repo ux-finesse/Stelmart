@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.popular {
+  display: flex;
+  justify-content: center;
+}
+
+.popwrp {
+  height: 461px;
+  margin-top: 48px;
+  display: flex;
+  width: 100%;
+  /* max-width: 90vw; */
+  margin-left: 133px;
+  padding: 20px 0;
+  flex-direction: column;
+}
+
+.poptop h2 {
+  font-size: 40px;
+  color: #fb8500;
+  margin-bottom: 25px;
+  font-family: "ClashGrotesk-Semibold";
+}
+
+.poptop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 133px;
+  justify-content: space-between;
+}
+
+.popbtns {
+  display: flex;
+  gap: 20px;
+}
+
+.products {
+  display: flex;
+  gap: 54px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  min-height: 370px;
+  padding-right: 133px;
+}
+

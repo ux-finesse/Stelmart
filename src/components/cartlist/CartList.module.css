@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("../fonts/ClashGrotesk-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-style: normal;
+}
+
+.cartlist_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 87vw;
+  margin: 26px auto;
+}
+
+.btnc {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #fb8500;
+}
+
+.cartlist_top h2 {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 59.04px;
+  text-align: center;
+  color: #023047;
+}
+
+.btnc p {
+  font-family: "ClashGrotesk-Medium";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.52px;
+  text-align: center;
+}
+
+.btnc p:hover {
+  text-decoration: underline;
+}
+
+.cartdata {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 85vw;
+}
+
+.total {
+  display: flex;
+  gap: 75px;
+  text-align: left;
+  padding-right: 77px;
+}
+
+.totchk {
+  display: flex;
+  flex-direction: column;
+  max-width: 87vw;
+  margin: 0 auto;
+  align-items: flex-end;
+}
+
+.total p {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 46.79px;
+  text-align: center;
+  color: #023047;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("../../fonts/ClashGrotesk-Medium.ttf") format("truetype");
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashGrotesk-Light";
+  src: url("../../fonts/ClashGrotesk-Light.ttf") format("truetype");
+
+  font-style: normal;
+}
+
+.subscribe {
+  margin: 45px 0 0 0;
+}
+
+.subscribe_wrp {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  margin: 50px;
+  align-items: center;
+  gap: 80px;
+}
+
+.input p {
+  font-family: "ClashGrotesk-Medium";
+  font-size: 26px;
+  line-height: 31.98px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #023047;
+}
+
+.subscribe_wrp h5 {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 43px;
+  line-height: 52.89px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #023047;
+}
+
+form {
+  position: relative;
+}
+
+.send {
+  position: absolute;
+  width: 88px;
+  height: 87px;
+  border-radius: 24px;
+  top: 0;
+  right: 0;
+}
+
+.form input {
+  width: 749.25px;
+  height: 89px;
+  padding: 24px 223px 24px 32px;
+  border-radius: 24px;
+  background-color: #9090903b;
+  font-family: "ClashGrotesk-Light";
+  font-size: 26px;
+  line-height: 33.85px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}

@@ -1,0 +1,36 @@
+
+@font-face {
+  font-family: 'ClashGrotesk-Medium';
+  src: 
+       url('../../fonts/ClashGrotesk-Medium.ttf') format('truetype');
+}
+
+.eclus{
+    margin-top: 33px;
+    display: flex;
+    align-items: center;
+}
+.exrp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+
+.exrp p{
+  font-family: 'ClashGrotesk-Medium';
+    font-size: 32px;
+}
+
+.exrp span{
+    
+    color: #FF0000;
+}
+
+.slide{
+    display: flex;
+    align-items: flex-start;
+}

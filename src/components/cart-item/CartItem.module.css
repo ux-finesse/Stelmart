@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "ClashGrotesk-Regular";
+  src: url("../../fonts/ClashGrotesk-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("../../fonts/ClashGrotesk-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Bold";
+  src: url("../../fonts/ClashGrotesk-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+.cartitem_pe {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 69px;
+  margin-bottom: 43px;
+}
+
+.aditm,
+.dtils,
+.siz,
+.colr,
+.qnt,
+.amt {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 20px;
+  line-height: 31.2px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-family: "ClashGrotesk-Medium";
+  font-size: 24px;
+  line-height: 29.52px;
+  text-align: center;
+}
+
+.titleone,
+.capt p {
+  font-family: "ClashGrotesk-Regular";
+  font-size: 14px;
+  line-height: 19.5px;
+  text-align: left;
+  color: #000000cc;
+}
+
+.capt p {
+  font-family: "ClashGrotesk-Regular";
+  font-size: 14px;
+  line-height: 19.5px;
+  text-align: left;
+  color: #000000cc;
+  width: 240px;
+  margin-bottom: 10px;
+}
+
+.ratingc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ratingc p {
+  font-family: "ClashGrotesk-Regular";
+  font-size: 14px;
+}
+
+.tithrt {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tithrt p {
+  font-family: Clash Grotesk;
+  font-family: "ClashGrotesk-Semibold";
+  color:#023047;
+line-height: 29.52px;
+text-align: center;
+
+}
+
+.cartbtn Button {
+  font-family: "ClashGrotesk-Medium";
+  font-size: 16px;
+  line-height: 19.68px;
+  padding: 10px 14px 10px 14px;
+  border-radius: 6px;
+  background-color: #023047;
+}
+
+.amtm{
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 24px;
+  line-height: 31.2px;
+  text-align: left;
+  color: #023047;
+}
