@@ -29,7 +29,7 @@ export const recproductCardData = [
   },
   {
     img: img4,
-    titleOne: "Firm Reading lamp Stand",
+    titleOne: "Reading lamp Stand",
     title: "Lamp Stand",
     price: "$22.99",
     rating: "4.2",

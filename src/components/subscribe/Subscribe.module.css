@@ -20,7 +20,8 @@
 }
 
 .subscribe {
-  margin: 45px 0 0 0;
+  margin: 45px auto 0;
+  max-width: 90vw;
 }
 
 .subscribe_wrp {
@@ -85,7 +86,6 @@ form {
   text-align: left;
 }
 
-/* Styles for tablets */
 @media (max-width: 1024px) {
   .input {
     margin: 40px;
@@ -112,7 +112,6 @@ form {
   }
 }
 
-/* Styles for mobile devices */
 @media (max-width: 768px) {
   .input {
     flex-direction: column;

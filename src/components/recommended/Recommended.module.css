@@ -50,27 +50,29 @@
   justify-content: center;
   margin-top: 76px;
   padding-right: 133px;
-
 }
 
-.secbtm Button:hover{
-  background-color:#023047;
+.secbtm Button:hover {
+  background-color: #023047;
 }
 
 .secbtm Button {
   font-family: "ClashGrotesk-Semibold";
   background-color: #fb8500;
-  padding: 10px 38.5px ;
+  padding: 10px 38.5px;
   border-radius: 12px;
 }
 
-.pro_btn{
+.pro_btn {
   display: flex;
   flex-direction: column;
 }
 
-
 @media (max-width: 1024px) {
+  .recommended {
+    margin-top: 0;
+  }
+
   .recwrp {
     margin-left: 50px;
     padding: 40px 21px;
@@ -100,9 +102,14 @@
 
 /* Styles for mobile devices */
 @media (max-width: 768px) {
+  .recommended {
+    margin-top: 0;
+  }
+
   .recwrp {
     margin-left: 0;
-    padding: 20px 16px;
+    padding: 0 16px 20px;
+    height: auto;
   }
 
   .rectop {
@@ -124,7 +131,7 @@
   .secbtm {
     padding-right: 0;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 0;
   }
 
   .secbtm Button {

@@ -11,9 +11,7 @@ const ProductCard = ({ img, titleOne, title, price, rating }) => {
   return (
     <>
       <div className={style.procnt}>
-        <div className={style.proimg}>
-          <img src={img} alt="productimg" />
-        </div>
+          <img src={img} alt="productimg" className={style.proimg}/>
 
         <div className={style.prodtl}>
           <div className={style.top}>

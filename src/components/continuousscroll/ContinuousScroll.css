@@ -1,0 +1,41 @@
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+}
+
+.scroll-content {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.scroll-content img {
+  width: 100%; /* Adjust width as necessary */
+  margin-right: 30px; /* Adjust space between images as necessary */
+}
+
+
+@media (max-width: 1024px) {
+  .scroll-container {
+    margin-top: 20px; /* Adjust margin for tablets */
+  }
+
+  .scroll-content img {
+    width: 50%;
+    margin-right: 20px; /* Adjust space between images for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-container {
+    margin-top: 10px; /* Adjust margin for mobile devices */
+  }
+
+  .scroll-content img {
+    width: 25%;
+    margin-right: 10px; /* Adjust space between images for mobile devices */
+  }
+}

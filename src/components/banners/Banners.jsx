@@ -2,6 +2,7 @@ import style from "../banners/Banners.module.css";
 import b1 from "../../assets/b1.svg";
 import b2 from "../../assets/b2.svg";
 import CountdownTimer from "../CountdownTimer";
+import DealsComponent from '../dealscomponent/DealsComponent'
 
 const Banners = () => {
   return (
@@ -23,10 +24,7 @@ const Banners = () => {
               </div>
             </div>
 
-            <div className={style.dealsbtm}>
-              <span>20%</span>
-              <p>Deals</p>
-            </div>
+            <DealsComponent />
           </div>
         </div>
       </div>

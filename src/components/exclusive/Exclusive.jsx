@@ -1,12 +1,29 @@
+/* eslint-disable no-unused-vars */
 import style from "../exclusive/Exclusive.module.css"
-import img1 from '../../assets/footwears.svg'
-import img2 from '../../assets/sandals.svg'
-import img3 from '../../assets/furnitures.svg'
-import img4 from '../../assets/cars.svg'
-import img5 from '../../assets/glasses.svg'
-import img6 from '../../assets/airpods.svg'
+import React, { useEffect, useRef } from "react"
+import ContinuousScroll from "../continuousscroll/ContinuousScroll"
 
 const Exclusive = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    let scrollAmount = 0;
+
+    const scrollStep = () => {
+      scrollContainer.scrollLeft += 1;
+      scrollAmount += 1;
+      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+        scrollContainer.scrollLeft = 0;
+        scrollAmount = 0;
+      }
+    };
+
+    const scrollInterval = setInterval(scrollStep, 20);
+
+    return () => clearInterval(scrollInterval);
+  }, []);
+
   return (
     <>
       <div className={style.eclus}>
@@ -14,18 +31,11 @@ const Exclusive = () => {
           <p>
             Stand a chance to get our <span>exclusive offer</span> everyday!!!
           </p>
-          <div className={style.slide}>
-            <img src={img1} alt="" />
-            <img src={img2} alt="" />
-            <img src={img3} alt="" />
-            <img src={img4} alt="" />
-            <img src={img5} alt="" />
-            <img src={img6} alt="" />
-          </div>
+          <ContinuousScroll/>
         </div>
       </div>
     </>
   );
 }
 
-export default Exclusive
+export default Exclusive;

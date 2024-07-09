@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("../../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk-Regular';
+  src: 
+       url('../fonts/ClashGrotesk-Regular.ttf') format('truetype');
+  
+  font-style: normal;
+}
+
+.dealsbtm{
+    display: flex;
+    gap: 30px;
+}
+.dealsbtm span {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 128px;
+  line-height: 157.44px;
+  text-align: left;
+}
+
+
+.dealsbtm p {
+  font-family: "ClashGrotesk-Semibold";
+  font-size: 128px;
+  line-height: 157.44px;
+  text-align: left;
+  color: #FB8500;
+}
+
+  

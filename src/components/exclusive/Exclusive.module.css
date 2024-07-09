@@ -30,12 +30,6 @@
     color: #FF0000;
 }
 
-.slide{
-    display: flex;
-    align-items: flex-start;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
 
 @media (max-width: 1024px) {
   .exrp p {

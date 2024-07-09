@@ -1,5 +1,6 @@
 import style from "../subscribe/Subscribe.module.css";
 import arrow from "../../assets/arrow.svg"
+
 const Subscribe = () => {
   return (
     <>

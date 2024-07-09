@@ -1,7 +1,7 @@
 import img1 from "./src/assets/img1.svg";
 import img2 from "./src/assets/img2.svg";
 import img3 from "./src/assets/img3.svg";
-import img4 from "./src/assets/img4.svg";
+import img4 from "./src/assets/glasses.svg";
 import img5 from "./src/assets/pants.svg";
 // import img6 from "./src/assets/img6.svg";
 
@@ -36,7 +36,7 @@ export const productCardData = [
   },
   {
     img: img5,
-    titleOne: "Beach Polyethene shorts",
+    titleOne: "Beach Polyethene ..",
     title: "Classic  Shorts",
     price: "$22.99",
     rating: "4.2",
