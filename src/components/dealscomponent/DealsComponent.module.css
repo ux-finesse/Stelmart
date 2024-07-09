@@ -32,4 +32,28 @@
   color: #FB8500;
 }
 
+@media (max-width: 1024px) {
+  .dealsbtm {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .dealsbtm span, .dealsbtm p {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dealsbtm {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dealsbtm span, .dealsbtm p {
+    font-size: 64px;
+  }
+
+}
+
   
