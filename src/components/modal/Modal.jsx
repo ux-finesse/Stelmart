@@ -3,12 +3,11 @@
 // ModalComponent.js
 import React from "react";
 import ReactModal from "react-modal";
-import "../modal/Modal.css";
 import ArrowLeft from "../../assets/ArrowLeft.svg";
 import check from "../../assets/CheckCircle.svg";
 import { Link } from "react-router-dom";
+import style from '../modal/Modal.module.css'
 
-// Ensure you set the app element to avoid screen readers issues
 ReactModal.setAppElement("#root");
 
 const ModalComponent = ({ isOpen, onRequestClose }) => {
@@ -16,18 +15,18 @@ const ModalComponent = ({ isOpen, onRequestClose }) => {
     <ReactModal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      className="modal-content"
-      overlayClassName="modal-overlay"
+      className={style.modalcontent}
+      overlayClassName={style.modaloverlay}
       contentLabel="Order Confirmation"
     >
-      <div className="btnctop">
+      <div className={style.btnctop}>
         <h2>Order placed</h2>
         <img src={check} alt="" />
       </div>
 
       <div onClick={onRequestClose}>
         <Link to="/" style={{ textDecoration: "none" }}>
-          <div className="btnc">
+          <div className={style.btnc}>
             <img src={ArrowLeft} alt="arrowleft" />
             <p>Continue shopping</p>
           </div>
