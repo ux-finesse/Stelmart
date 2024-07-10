@@ -208,15 +208,19 @@ form input::placeholder {
   font-family: "ClashGrotesk-Semibold";
 }
 
-.btn Button {
+.btn {
   width: 195px;
   height: 50px;
   margin-top: 26px;
   padding: 10px;
   gap: 10px;
   border-radius: 18px;
+  font-size: 24px;
   background: #fb8500;
+  color: #fff;
+  font-family: "ClashGrotesk-Medium";
   cursor: pointer;
+  border: none;
 }
 .chktsumbtn {
   display: flex;
@@ -224,7 +228,7 @@ form input::placeholder {
   flex-direction: column;
 }
 
-.btn Button:hover {
+.btn:hover {
   background: #023047;
 }
 

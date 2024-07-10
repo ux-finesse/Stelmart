@@ -1,11 +1,23 @@
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import style from "../checkout/CheckOut.module.css";
-import visa from "../../assets/visa.svg"
+import visa from "../../assets/visa.svg";
 import mastercard from "../../assets/mastercard.svg";
 import paypal from "../../assets/paypal.svg";
-import Button from '../../layout/all-buttons/button/Button'
-import { Link } from "react-router-dom";
+// import Button from "../../layout/all-buttons/button/Button";
+import ModalComponent from "../modal/Modal";
 
 const CheckOut = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOrderConfirm = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <div className={style.checkout}>
@@ -27,7 +39,6 @@ const CheckOut = () => {
                     required
                   />
                 </div>
-
                 <div className={style.add}>
                   <label htmlFor="address">Delivery Address</label>
                   <input
@@ -38,7 +49,6 @@ const CheckOut = () => {
                     required
                   />
                 </div>
-
                 <div className={style.names}>
                   <div className={style.fname}>
                     <label htmlFor="firstname">John</label>
@@ -50,7 +60,6 @@ const CheckOut = () => {
                       required
                     />
                   </div>
-
                   <div className={style.lname}>
                     <label htmlFor="lastname">Doe</label>
                     <input
@@ -62,7 +71,6 @@ const CheckOut = () => {
                     />
                   </div>
                 </div>
-
                 <div className={style.phone}>
                   <label htmlFor="coupon">Phone Number</label>
                   <input
@@ -73,7 +81,6 @@ const CheckOut = () => {
                     required
                   />
                 </div>
-
                 <div className={style.coupon}>
                   <label htmlFor="coupon">
                     Apply Coupon Code <span>(Optional)</span>
@@ -129,15 +136,14 @@ const CheckOut = () => {
                   <span>$144.99</span>
                 </div>
               </div>
-              <Link to="/ordercomplete" style={{ textDecoration: "none" }}>
-                <div className={style.btn}>
-                  <Button type="submit" text="Confirm Order" />
-                </div>
-              </Link>
+              <button className={style.btn} onClick={handleOrderConfirm}>
+                Confirm Order
+              </button>
             </div>
           </div>
         </div>
       </div>
+      <ModalComponent isOpen={isModalOpen} onRequestClose={handleCloseModal} />
     </>
   );
 };

@@ -138,10 +138,15 @@
 
 .amtm {
   font-family: "ClashGrotesk-Semibold";
-  font-size: 24px;
+  font-size: 20px;
   line-height: 31.2px;
   text-align: left;
   color: #023047;
+}
+
+
+.cartbtn1 Button:hover{
+background-color: #72abc7;
 }
 
 @media (max-width: 1024px) {

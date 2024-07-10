@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("../fonts/ClashGrotesk-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 455px;
+  height: 302px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btnc{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+}
+
+.btnc p {
+  font-family: "ClashGrotesk-Medium";
+  font-size: 20px;
+  line-height: 29.52px;
+  text-align: center;
+  color: #FB8500;
+
+}
+
+.btnc p:hover {
+  text-decoration: underline;
+}
+
+.btnctop h2 {
+  font-family: "ClashGrotesk-Medium";
+  font-size: 40px;
+  line-height: 49.2px;
+  color: #023047;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btnctop{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}

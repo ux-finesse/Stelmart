@@ -1,20 +1,40 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-// Modal.js
+/* eslint-disable no-unused-vars */
+// ModalComponent.js
 import React from "react";
-import style from "../modal/Modal.module.css";
+import ReactModal from "react-modal";
+import "../modal/Modal.css";
+import ArrowLeft from "../../assets/ArrowLeft.svg";
+import check from "../../assets/CheckCircle.svg";
+import { Link } from "react-router-dom";
 
-const Modal = ({ show, handleClose, children }) => {
+// Ensure you set the app element to avoid screen readers issues
+ReactModal.setAppElement("#root");
+
+const ModalComponent = ({ isOpen, onRequestClose }) => {
   return (
-    <div className={`modal ${show ? "show" : ""}`}>
-      <div className={style.mdlcont}>
-        <span className={style.close} onClick={handleClose}>
-          &times;
-        </span>
-        {children}
+    <ReactModal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+      className="modal-content"
+      overlayClassName="modal-overlay"
+      contentLabel="Order Confirmation"
+    >
+      <div className="btnctop">
+        <h2>Order placed</h2>
+        <img src={check} alt="" />
       </div>
-    </div>
+
+      <div onClick={onRequestClose}>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <div className="btnc">
+            <img src={ArrowLeft} alt="arrowleft" />
+            <p>Continue shopping</p>
+          </div>
+        </Link>
+      </div>
+    </ReactModal>
   );
 };
 
-export default Modal;
+export default ModalComponent;
