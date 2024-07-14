@@ -14,34 +14,34 @@ export const cartData = [
   {
     img: pimg1,
     titleOne: "Quality USA made Birkens",
-    rating: "3.5",
+    rating: 3.5,
     title: "Birken stock  shoe",
     caption:
       "With it’s soft and flexible sole, Eartha real color, this ready to go and affordable beckings sandals can be worn by all.",
-    size: size1,
+    size: size2,
     color: color1,
-    amount: "$144.99",
+    price: 144.99,
   },
   {
     img: pimg2,
     titleOne: "GXT Headphone SPF",
-    rating: "3.5",
+    rating: 3.5,
     title: "GTX Headphone",
     caption:
       "High-definition audio with clear highs and deep bass. Comfortable ergonomic design for extended wear.",
     size: size2,
     color: color2,
-    amount: "$64.99",
+    price: 64.99,
   },
   {
     img: pimg3,
     titleOne: "Portable Generic Speaker",
-    rating: "3.5",
+    rating: 3.5,
     title: "Generic Speaker",
     caption:
       "Light weight generic portable speaker, with four USB Port and memory SSD Card slot.",
     size: size3,
     color: color3,
-    amount: "$100.99",
-  }
+    price: 100.99,
+  },
 ];

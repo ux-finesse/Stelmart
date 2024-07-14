@@ -21,6 +21,9 @@ const BestDeal = () => {
                   title={item.title}
                   price={item.price}
                   rating={item.rating}
+                  size={item.size}
+                  caption={item.caption}
+                  color={item.color}
                   key={idx}
                 />
               );

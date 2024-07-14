@@ -1,21 +1,81 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "../checkout/CheckOut.module.css";
 import visa from "../../assets/visa.svg";
 import mastercard from "../../assets/mastercard.svg";
 import paypal from "../../assets/paypal.svg";
-// import Button from "../../layout/all-buttons/button/Button";
 import ModalComponent from "../modal/Modal";
+import { useSelector } from "react-redux";
 
 const CheckOut = () => {
+  const cartItems = useSelector((state) => state.cart.items);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    address: "",
+    firstname: "",
+    lastname: "",
+    phone: "",
+    coupon: "",
+  });
+  const [errors, setErrors] = useState({});
 
-  const handleOrderConfirm = () => {
-    setIsModalOpen(true);
+  const handleOrderConfirm = (event) => {
+    event.preventDefault();
+    const newErrors = validateForm(formData);
+    if (Object.keys(newErrors).length === 0) {
+      setIsModalOpen(true);
+    } else {
+      setErrors(newErrors);
+    }
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    if (errors[name]) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: null,
+      }));
+    }
+  };
+
+  const validateForm = (data) => {
+    const errors = {};
+    if (!data.email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+      errors.email = "Email address is invalid";
+    }
+    if (!data.address) {
+      errors.address = "Address is required";
+    }
+    if (!data.firstname) {
+      errors.firstname = "First name is required";
+    }
+    if (!data.lastname) {
+      errors.lastname = "Last name is required";
+    }
+    if (!data.phone) {
+      errors.phone = "Phone number is required";
+    } else if (!/^\+?\d{10,}$/.test(data.phone)) {
+      errors.phone = "Phone number is invalid";
+    }
+    return errors;
+  };
+
+  const calculateTotal = () => {
+    return cartItems
+      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
   };
 
   return (
@@ -28,7 +88,7 @@ const CheckOut = () => {
 
           <div className={style.chckfrm}>
             <div className={style.chckfrml}>
-              <form action="">
+              <form onSubmit={handleOrderConfirm}>
                 <div className={style.email}>
                   <label htmlFor="email">Email</label>
                   <input
@@ -36,8 +96,14 @@ const CheckOut = () => {
                     id="email"
                     name="email"
                     placeholder="abc@example.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={errors.email ? style.errorInput : ""}
                     required
                   />
+                  {errors.email && (
+                    <p className={style.error}>{errors.email}</p>
+                  )}
                 </div>
                 <div className={style.add}>
                   <label htmlFor="address">Delivery Address</label>
@@ -46,40 +112,64 @@ const CheckOut = () => {
                     id="address"
                     name="address"
                     placeholder="223B, Baker ‘s street"
+                    value={formData.address}
+                    onChange={handleChange}
+                    className={errors.address ? style.errorInput : ""}
                     required
                   />
+                  {errors.address && (
+                    <p className={style.error}>{errors.address}</p>
+                  )}
                 </div>
                 <div className={style.names}>
                   <div className={style.fname}>
-                    <label htmlFor="firstname">John</label>
+                    <label htmlFor="firstname">First Name</label>
                     <input
                       type="text"
                       id="firstname"
                       name="firstname"
                       placeholder="John"
+                      value={formData.firstname}
+                      onChange={handleChange}
+                      className={errors.firstname ? style.errorInput : ""}
                       required
                     />
+                    {errors.firstname && (
+                      <p className={style.error}>{errors.firstname}</p>
+                    )}
                   </div>
                   <div className={style.lname}>
-                    <label htmlFor="lastname">Doe</label>
+                    <label htmlFor="lastname">Last Name</label>
                     <input
                       type="text"
                       id="lastname"
                       name="lastname"
                       placeholder="Doe"
+                      value={formData.lastname}
+                      onChange={handleChange}
+                      className={errors.lastname ? style.errorInput : ""}
                       required
                     />
+                    {errors.lastname && (
+                      <p className={style.error}>{errors.lastname}</p>
+                    )}
                   </div>
                 </div>
                 <div className={style.phone}>
-                  <label htmlFor="coupon">Phone Number</label>
+                  <label htmlFor="phone">Phone Number</label>
                   <input
                     type="text"
-                    id="coupon"
-                    name="coupon"
+                    id="phone"
+                    name="phone"
                     placeholder="+234"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={errors.phone ? style.errorInput : ""}
                     required
                   />
+                  {errors.phone && (
+                    <p className={style.error}>{errors.phone}</p>
+                  )}
                 </div>
                 <div className={style.coupon}>
                   <label htmlFor="coupon">
@@ -90,7 +180,8 @@ const CheckOut = () => {
                     id="coupon"
                     name="coupon"
                     placeholder=""
-                    required
+                    value={formData.coupon}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -103,9 +194,9 @@ const CheckOut = () => {
                     </div>
 
                     <div className={style.paymtds}>
-                      <img src={visa} alt="" />
-                      <img src={paypal} alt="" />
-                      <img src={mastercard} alt="" />
+                      <img src={visa} alt="Visa" />
+                      <img src={paypal} alt="Paypal" />
+                      <img src={mastercard} alt="MasterCard" />
                     </div>
                   </div>
                 </div>
@@ -117,23 +208,23 @@ const CheckOut = () => {
                 <p>Summary</p>
                 <div className={style.tit}>
                   <p>Total Item:</p>
-                  <span>$144.99</span>
+                  <span>${calculateTotal()}</span>
                 </div>
                 <div className={style.shf}>
                   <p>Shipping Fee:</p>
                   <span>$0.00</span>
                 </div>
                 <div className={style.dlf}>
-                  <p>Delivery fee:</p>
-                  <span>$144.99</span>
+                  <p>Delivery Fee:</p>
+                  <span>$0.00</span>
                 </div>
                 <div className={style.sut}>
                   <p>Sub Total:</p>
-                  <span>$144.99</span>
+                  <span>${calculateTotal()}</span>
                 </div>
                 <div className={style.est}>
                   <p>Estimated Total:</p>
-                  <span>$144.99</span>
+                  <span>${calculateTotal()}</span>
                 </div>
               </div>
               <button className={style.btn} onClick={handleOrderConfirm}>

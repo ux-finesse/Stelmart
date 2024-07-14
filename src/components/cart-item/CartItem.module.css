@@ -22,8 +22,8 @@
 .cartitem_pe {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 69px;
-  margin-bottom: 43px;
+  column-gap: 69px;
+  row-gap: 30px;
 }
 
 
@@ -98,7 +98,6 @@
 }
 
 .tithrt p {
-  font-family: Clash Grotesk;
   font-family: "ClashGrotesk-Regular";
   color: #023047;
   line-height: 29.52px;
@@ -130,6 +129,7 @@
   padding: 10px 14px 10px 14px;
   border-radius: 6px;
   background-color: #023047;
+  cursor: pointer;
 }
 
 .cartbtn Button {

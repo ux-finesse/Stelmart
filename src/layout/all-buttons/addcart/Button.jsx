@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
-import style from "./Button.module.css";
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import style from './Button.module.css';
 
-const Button = () => {
+const Button = ({ text, onClick }) => {
   return (
-    <>
-      <button className={style.btn}>
-        <p>Add to Cart</p>
-      </button>
-    </>
+    <button className={style.button} onClick={onClick}>
+      {text}
+    </button>
   );
 };
 

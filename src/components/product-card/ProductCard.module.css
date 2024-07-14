@@ -41,6 +41,10 @@
   margin-bottom: 17px;
 }
 
+.capt, .color, .size{
+  display: none;
+}
+
 .top {
   font-size: 14px;
   font-family: "ClashGrotesk-Regular";
@@ -71,6 +75,8 @@
   border-radius: 17px;
   background-color: #023047;
   cursor: pointer;
+  border: none;
+  color: #fff;
 }
 .btm Button:hover {
   background: #72ABC7;

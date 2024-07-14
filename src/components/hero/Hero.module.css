@@ -1,19 +1,37 @@
-.hero {
+.hero_cnt {
   position: relative;
-}
-
-.hero img {
-  width: 100%;
-}
-
-.qbtn {
-  position: absolute;
+  top: 88px;
   left: 0;
   right: 0;
+}
+
+.hero {
+  width: 100%;
+}
+.herom{
+    display: none;
+  }
+
+/* .heroM{
+    display: none;
+  } */
+
+/* .qbtn {
+  position: absolute;
   top: 290px;
   display: flex;
   gap: 18px;
   align-items: center;
   margin: 0 auto;
   justify-content: center;
+} */
+
+@media (max-width: 480px) {
+  .hero{
+    display: none;
+  }
+
+  .herom{
+    margin-top: 35px;
+  }
 }

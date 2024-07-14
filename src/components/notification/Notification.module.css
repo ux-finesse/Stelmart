@@ -1,0 +1,28 @@
+/* src/components/notification/Notification.module.css */
+.notification {
+  position: fixed;
+  font-family: "ClashGrotesk-Medium";
+  top: -50px; /* Start off-screen */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #023047;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification.show {
+  top: 20px; /* Slide down into view */
+  opacity: 0.9;
+}
+
+.notification p {
+  margin: 0;
+}
