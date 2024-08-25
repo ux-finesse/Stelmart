@@ -1,5 +1,15 @@
 .empty{
     display: flex;
-    margin: 200px auto 150px;
+    margin: 0 auto 150px;
     justify-content: center;
+}
+
+@media (max-width: 480px) {
+.empty{
+    margin: 15px auto 15px;
+}
+
+    .empty img{
+        width: 100%;
+    }
 }

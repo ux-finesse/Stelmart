@@ -49,6 +49,18 @@
   padding-right: 133px;
 }
 
+.skeleton {
+  display: flex;
+  gap: 54px;
+  min-height: 370px;
+  padding-right: 133px;
+  padding: 20px 0;
+  margin-top: 48px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  min-height: 370px;
+  margin-left: 133px;
+}
 
 @media (max-width: 1024px) {
   .popwrp {
@@ -64,6 +76,11 @@
     padding-right: 50px;
     gap: 30px;
   }
+
+   .skeleton{
+  margin-left: 0;
+
+   }
 
   .poptop h2 {
     font-size: 32px;
@@ -86,6 +103,11 @@
   .poptop h2 {
     font-size: 28px;
   }
+
+   .skeleton{
+ display: none;
+
+   }
 
   .popbtns {
     margin-top: 15px;

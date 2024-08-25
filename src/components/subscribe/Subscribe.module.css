@@ -140,4 +140,8 @@ form {
     width: 60px;
     height: 60px;
   }
+
+  .subscribe {
+  margin: 0 auto 0;
+}
 }

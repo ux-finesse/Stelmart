@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "ClashGrotesk-Regular";
-  src: url("../../fonts/ClashGrotesk-Regular.ttf") format("truetype");
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ClashGrotesk-Semibold";
-  src: url("../fonts/ClashGrotesk-Semibold.ttf") format("truetype");
-  font-display: swap;
-  font-style: normal;
-}
-
 .procnt {
   width: 270px;
   height: 370px;
@@ -43,47 +29,6 @@
 
 .capt, .color, .size{
   display: none;
-}
-
-.top {
-  font-size: 14px;
-  font-family: "ClashGrotesk-Regular";
-}
-
-.mid {
-  font-size: 24px;
-  font-family: "ClashGrotesk-Semibold";
-}
-
-.btm {
-  font-size: 14px;
-  font-family: "ClashGrotesk-Regular";
-}
-
-.rating {
-  font-family: "ClashGrotesk-Regular";
-  display: flex;
-  font-size: 14px;
-  gap: 5px;
-  align-items: center;
-}
-
-.btm Button {
-  font-family: "ClashGrotesk-Medium";
-  font-size: 16px;
-  padding: 5px 13px;
-  border-radius: 17px;
-  background-color: #023047;
-  cursor: pointer;
-  border: none;
-  color: #fff;
-}
-.btm Button:hover {
-  background: #72ABC7;
-}
-
-.btm p {
-  font-size: 20px;
 }
 
 @media (max-width: 1024px) {

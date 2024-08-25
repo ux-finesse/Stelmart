@@ -26,3 +26,11 @@
 .notification p {
   margin: 0;
 }
+
+@media (max-width: 468px) {
+.notification{
+  top: -60px;
+}
+
+  
+}

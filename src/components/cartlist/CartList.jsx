@@ -19,7 +19,10 @@ const CartList = () => {
 
   const calculateTotal = () => {
     return cartItems
-      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .reduce(
+        (total, products) => total + products.current_price * products.quantity,
+        0
+      )
       .toFixed(2);
   };
 
@@ -40,19 +43,19 @@ const CartList = () => {
           {cartItems.length === 0 ? (
             <EmptyCart />
           ) : (
-            cartItems.map((item) => (
+            cartItems.map((products) => (
               <CartItem
-                key={item.id}
-                id={item.id}
-                img={item.img}
-                titleOne={item.titleOne}
-                rating={item.rating}
-                title={item.title}
-                caption={item.caption}
-                size={item.size}
-                color={item.color}
-                price={item.price}
-                quantity={item.quantity}
+                key={products.idx}
+                id={products.id}
+                img={products.img}
+                titleOne={products.titleOne}
+                rating={products.rating}
+                title={products.name}
+                description={products.description}
+                size={products.size}
+                color={products.color}
+                price={products.current_price}
+                quantity={products.quantity}
                 onRemove={handleRemoveItem}
               />
             ))

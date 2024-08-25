@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import style from "../checkout/CheckOut.module.css";
 import visa from "../../assets/visa.svg";
 import mastercard from "../../assets/mastercard.svg";
 import paypal from "../../assets/paypal.svg";
 import ModalComponent from "../modal/Modal";
-import { useSelector } from "react-redux";
+import { clearCart } from "../../features/cart/cartSlice";
 
 const CheckOut = () => {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -24,7 +26,10 @@ const CheckOut = () => {
     event.preventDefault();
     const newErrors = validateForm(formData);
     if (Object.keys(newErrors).length === 0) {
+      // Show confirmation modal
       setIsModalOpen(true);
+      // Dispatch action to clear cart
+      dispatch(clearCart());
     } else {
       setErrors(newErrors);
     }

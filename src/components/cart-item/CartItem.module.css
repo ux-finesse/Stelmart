@@ -199,7 +199,7 @@ background-color: #72abc7;
   }
   .color img,
   .size img {
-    width: 75%;
+    width: 50%;
   }
 
   .itm_img img {
@@ -211,6 +211,9 @@ background-color: #72abc7;
   .cartitem_pe {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-bottom: 70px;
+    column-gap: 69px;
+  row-gap: 30px;
   }
 
   .aditm,
@@ -265,6 +268,7 @@ background-color: #72abc7;
   .cartitem_pe {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+    width: 340px;
   }
 
   .aditm,
@@ -323,6 +327,7 @@ background-color: #72abc7;
     gap: 100px;
     justify-content: space-between;
   }
+  
   .size img,
   .color img {
     width: 20%;
@@ -330,4 +335,8 @@ background-color: #72abc7;
   .itm_img img {
     width: 100%;
   }
+
+  .cartbtn Button {
+  display: block;
+}
 }
